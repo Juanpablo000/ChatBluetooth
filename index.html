@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat bluetooth</title>
+    <script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css"></script>
+</head>
+<body>
+    <section class="vista" id="Inicio">
+        <form class="input-group1" id="Flogin" method="post">
+            <input name= "userA" id= "userA" type="text" class="input-login" placeholder="Nombre de usuario" pattern="[A-Za-z0-9!?-]{5,12}" required/>
+            <input name = "claveA" id="claveA" type="password" class="input-login" placeholder="Contraseña" pattern="[a-zA-Z0-9\_\-]{8,12}$" required/>
+            <button type="submit" class="submit-btn" id="btn1">Acceder</button>
+            <button type="submit" id="btn2" class="submit-btn">Registrarse</button>
+        </form>
+
+    </section>
+
+    <section class="vista" id="Registro">
+        <form class="input-group" id="registro" method="post" name="f1">
+            <input type="text" name="nombre" id="nombre" placeholder="Nombres" class="input-field" onkeyup="validationF(this.id)" required/>
+            <span id="textNom"></span>
+
+            <input type="text"  class="input-field" name="apellidos" placeholder="Apellidos" id="apellidos" onkeyup="validationF(this.id)" required/>
+            <span id="textApp"></span>
+
+            <fieldset>
+                <legend>Genero</legend>
+                <label><input type="radio" name="genero" value="Masculino"required/> Masculino </label>
+                <label><input type="radio" name="genero" value="Femenino" required/> Femenino </label>	
+            </fieldset>
+        
+            <input type="text" class="input-field" placeholder="Usuario" name="usuario" id="usuario" onkeyup="validationF(this.id)" required/>
+             <span id="textUsr"></span>
+        
+            <input type="password" class="input-field" placeholder="Contraseña" name="password" id="password" onkeyup="validationF(this.id)" required/>
+            <span id="texClr1"></span>
+            <input type="password" class="input-field" placeholder="Confime contraseña" name="password2" id="password2" onkeyup="validarClaves()" required/>
+            <span id="texClr2"></span>
+            <button type="submit" onClick="return val()" id="btn2"class="submit-btn">Registrarse</button>
+       </form>
+    </section>
+
+    <section class="vista" id="Escaner">
+        
+        <br>
+            <h2 class="titulo-medio">Escaner</h2>
+        <br>
+        <button type="submit" class="submit-btn" id="btn1">Buscar dispositivos</button>
+        <h3 class="Subtitulo">Dispositivos encontrados</h3>
+
+       
+    </section>
+
+    <section class="vista" id="ListaChats">
+
+    </section>
+
+    <section class="vista" id="ChatUsuario">
+
+    </section>
+
+    <section class="vista" id="MenuOpciones">
+
+    </section>
+    <section class="vista" id="EditarPerfil">
+
+    </section>
+
+    <section class="vista" id="EditarFoto">
+
+    </section>
+
+    <section class="vista" id="CambiarPassword">
+
+    </section>
+
+    <section class="vista" id="Acercade">
+
+    </section>
+</body>
+</html>

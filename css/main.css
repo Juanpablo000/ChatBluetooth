@@ -1,0 +1,45 @@
+section{
+    width:360px;
+    height:592px;
+    text-align: center;
+}
+body{
+    margin:0px;
+}
+
+.titulo-medio{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+#Inicio{
+    background:lightblue;
+}
+#Registro{
+    background: lightseagreen;
+}
+#Escaner{
+    background: lightsteelblue;
+}
+#ListaChats{
+    background: lightsalmon;
+}
+#ChatUsuario{
+    background: lightgreen;
+}
+#MenuOpciones{
+    background: lightyellow;
+}
+#EditarPerfil{
+    background: lightpink;
+}
+#EditarFoto{
+    background: blueviolet;
+}
+#CambiarPassword{
+    background: brown;
+}
+#Acercade{
+    background: aqua;
+}

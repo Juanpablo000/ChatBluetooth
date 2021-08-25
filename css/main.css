@@ -2,9 +2,17 @@ section{
     width:360px;
     height:592px;
     text-align: center;
+    margin: 0 auto;
+    position: relative;
 }
 body{
-    margin:0px;
+	margin: 0;
+	padding: 0;
+	background: black;
+}
+
+.ocultar{
+    display: none;
 }
 
 .titulo-medio{
@@ -42,4 +50,16 @@ body{
 }
 #Acercade{
     background: aqua;
+}
+.boton{
+	background-color: Navy;
+	color:white;
+	padding: 10px;
+	text-decoration: none;
+}
+.volver{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: 20px;
 }

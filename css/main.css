@@ -1,65 +1,79 @@
-section{
-    width:360px;
-    height:592px;
-    text-align: center;
-    margin: 0 auto;
-    position: relative;
-}
-body{
-	margin: 0;
-	padding: 0;
-	background: black;
+section {
+  width: 360px;
+  height: 592px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-.ocultar{
-    display: none;
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
 }
 
-.titulo-medio{
-    background-color: black;
-    color: white;
-    text-align: center;
+.ocultar {
+  display: none;
 }
 
-#Inicio{
-    background:lightblue;
+.titulo-medio {
+  background-color: black;
+  color: white;
+  text-align: center;
 }
-#Registro{
-    background: lightseagreen;
+
+#Inicio {
+  background: lightblue;
 }
-#Escaner{
-    background: lightsteelblue;
+
+#Registro {
+  background: lightseagreen;
 }
-#ListaChats{
-    background: lightsalmon;
+
+#Escaner {
+  background: lightsteelblue;
 }
-#ChatUsuario{
-    background: lightgreen;
+
+#ListaChats {
+  background: lightsalmon;
 }
-#MenuOpciones{
-    background: lightyellow;
+
+#ChatUsuario {
+  background: lightgreen;
 }
-#EditarPerfil{
-    background: lightpink;
+
+#MenuOpciones {
+  background: lightyellow;
 }
-#EditarFoto{
-    background: blueviolet;
+
+#EditarPerfil {
+  background: lightpink;
 }
-#CambiarPassword{
-    background: brown;
+
+#EditarFoto {
+  background: blueviolet;
 }
-#Acercade{
-    background: aqua;
+
+#CambiarPassword {
+  background: brown;
 }
-.boton{
-	background-color: Navy;
-	color:white;
-	padding: 10px;
-	text-decoration: none;
+
+#Acercade {
+  background: aqua;
 }
-.volver{
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	height: 20px;
+
+.boton {
+  background-color: Navy;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.volver {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 20px;
 }

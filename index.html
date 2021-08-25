@@ -1,99 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat bluetooth</title>
-    <script type="text/javascript" src="js/main.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/main.css"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat bluetooth</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  </script>
 </head>
+
 <body>
-    <section class="ocultar" id="Inicio">
-        <br>
-        <h1>Inicio</h1>
-        <img src="imgs/i1.png" alt="">
-		<br>
-        <br>
-
-        <form class="input-group1" id="Flogin" method="post">
-            <input name= "userA" id= "userA" type="text" class="input-login" placeholder="Nombre de usuario" pattern="[A-Za-z0-9!?-]{5,12}" required/>
-            <input name = "claveA" id="claveA" type="password" class="input-login" placeholder="Contraseña" pattern="[a-zA-Z0-9\_\-]{8,12}$" required/>
-            <button type="submit" class="submit-btn" id="btn1">Acceder</button>
-            <button type="submit" id="btn2" class="submit-btn">Registrarse</button>
-        </form>
-
-    </section>
-
-    <section class="ocultar" id="Registro">
-        <form class="input-group" id="registro" method="post" name="f1">
-            <input type="text" name="nombre" id="nombre" placeholder="Nombres" class="input-field" onkeyup="validationF(this.id)" required/>
-            <span id="textNom"></span>
-
-            <input type="text"  class="input-field" name="apellidos" placeholder="Apellidos" id="apellidos" onkeyup="validationF(this.id)" required/>
-            <span id="textApp"></span>
-
-            <fieldset>
-                <legend>Genero</legend>
-                <label><input type="radio" name="genero" value="Masculino"required/> Masculino </label>
-                <label><input type="radio" name="genero" value="Femenino" required/> Femenino </label>	
-            </fieldset>
-        
-            <input type="text" class="input-field" placeholder="Usuario" name="usuario" id="usuario" onkeyup="validationF(this.id)" required/>
-             <span id="textUsr"></span>
-        
-            <input type="password" class="input-field" placeholder="Contraseña" name="password" id="password" onkeyup="validationF(this.id)" required/>
-            <span id="texClr1"></span>
-            <input type="password" class="input-field" placeholder="Confime contraseña" name="password2" id="password2" onkeyup="validarClaves()" required/>
-            <span id="texClr2"></span>
-            <button type="submit" onClick="return val()" id="btn2"class="submit-btn">Registrarse</button>
-       </form>
-    </section>
-
-    <section class="ocultar" id="Escaner">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
-            <h2 class="titulo-medio">Escaner</h2>
-        <br>
-        <button type="submit" class="submit-btn" id="btn1">Buscar dispositivos</button>
-        <h3 class="Subtitulo">Dispositivos encontrados</h3>
-
-       
-    </section>
-
-    <section class="ocultar" id="ListaChats">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
-    </section>
-
-    <section class="ocultar" id="ChatUsuario">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
-    </section>
-
-    <section class="ocultar" id="MenuOpciones">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
-    </section>
-
-    <section class="ocultar" id="EditarPerfil">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
-    </section>
-
-    <section class="ocultar" id="EditarFoto">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
-    </section>
-
-    <section class="ocultar" id="CambiarPassword">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
-    </section>
-
-    <section class="ocultar" id="Acercade">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
-    </section>
+  <section id="Inicio">
+    <h1>Inicio</h1>
+    <img src="imgs/i1.png" alt="">
+    <form class="input-group" id="Flogin" onsubmit="event.preventDefault(); return gotTo(2);">
+      <input name="userA" id="userA" type="text" class="input-login" placeholder="Nombre de usuario" required />
+      <input name="claveA" id="claveA" type="password" class="input-login" placeholder="Contraseña" required />
+      <button type="submit" class="submit-btn" id="btn1">Acceder</button>
+      <button type="button" onclick="gotTo(1)" id="btn2" class="submit-btn">Registrarse</button>
+    </form>
+  </section>
+  <section id="Registro">
+    <div>
+      <a href="#" onclick="gotTo(0)" class="boton volver">&lt;</a>
+    </div>
+    <div>
+      <form class="input-group" id="registro" onsubmit="event.preventDefault(); return gotTo(3);">
+        <input type="text" name="nombre" id="nombre" placeholder="Nombres" class="input-field"
+          onkeyup="validationF(this.id)" required />
+        <span id="textNom"></span>
+        <input type="text" class="input-field" name="apellidos" placeholder="Apellidos" id="apellidos"
+          onkeyup="validationF(this.id)" required />
+        <span id="textApp"></span>
+        <fieldset>
+          <legend>Genero</legend>
+          <label><input type="radio" name="genero" value="Masculino" required /> Masculino </label>
+          <label><input type="radio" name="genero" value="Femenino" required /> Femenino </label>
+        </fieldset>
+        <input type="text" class="input-field" placeholder="Usuario" name="usuario" id="usuario"
+          onkeyup="validationF(this.id)" required />
+        <span id="textUsr"></span>
+        <input type="password" class="input-field" placeholder="Contraseña" name="password" id="password"
+          onkeyup="validationF(this.id)" required />
+        <span id="texClr1"></span>
+        <input type="password" class="input-field" placeholder="Confime contraseña" name="password2" id="password2"
+          onkeyup="validarClaves()" required />
+        <span id="texClr2"></span>
+        <button type="submit" onclick="gotTo(2)" id="btn2" class="submit-btn">Registrarse</button>
+      </form>
+    </div>
+  </section>
+  <section id="Escaner">
+    <a href="#" onclick="gotTo(0)" class="boton volver">&lt;</a>
+    <h2 class="titulo-medio">Escaner</h2>
+    <form class="input-group1" onsubmit="event.preventDefault(); return gotTo(3);">
+      <button type="submit" class="submit-btn" id="btn1">Buscar dispositivos</button>
+      <h3 class="Subtitulo">Dispositivos encontrados</h3>
+    </form>
+  </section>
+  <section id="ListaChats">
+    <a href="#" onclick="gotTo(2)" class="boton volver">&lt;</a>
+    <h2 class="titulo-medio">Listado de chats</h2>
+    <form class="input-group1" onsubmit="event.preventDefault(); return gotTo(4);">
+      <button type="submit" class="submit-btn" id="btn1">Siguiente</button>
+      <!-- <h3 class="Subtitulo">Lista de chats</h3> -->
+    </form>
+  </section>
+  <section id="ChatUsuario">
+    <a href="#" onclick="gotTo(3)" class="boton volver">&lt;</a>
+    <h2 class="titulo-medio">Chat</h2>
+    <form class="input-group1" onsubmit="event.preventDefault(); return gotTo(5);">
+      <button type="submit" class="submit-btn" id="btn1">Siguiente</button>
+      <!-- <h3 class="Subtitulo">Dispositivos encontrados</h3> -->
+    </form>
+  </section>
+  <section id="MenuOpciones">
+    <a href="#" onclick="gotTo(4)" class="boton volver">&lt;</a>
+    <h2 class="titulo-medio">Opciones</h2>
+    <form class="input-group1" onsubmit="event.preventDefault(); return gotTo(6);">
+      <button type="submit" class="submit-btn" id="btn1">Siguiente</button>
+      <!-- <h3 class="Subtitulo">Dispositivos encontrados</h3> -->
+    </form>
+  </section>
+  <section id="EditarPerfil">
+    <a href="#" onclick="gotTo(5)" class="boton volver">&lt;</a>
+    <h2 class="titulo-medio">Editar Perfil</h2>
+    <form class="input-group1" onsubmit="event.preventDefault(); return gotTo(7);">
+      <button type="submit" class="submit-btn" id="btn1">Siguiente</button>
+      <!-- <h3 class="Subtitulo">Dispositivos encontrados</h3> -->
+    </form>
+  </section>
+  <section id="EditarFoto">
+    <a href="#" onclick="gotTo(6)" class="boton volver">&lt;</a>
+    <h2 class="titulo-medio">Editar Foto</h2>
+    <form class="input-group1" onsubmit="event.preventDefault(); return gotTo(8);">
+      <button type="submit" class="submit-btn" id="btn1">Siguiente</button>
+      <!-- <h3 class="Subtitulo">Dispositivos encontrados</h3> -->
+    </form>
+  </section>
+  <section id="CambiarPassword">
+    <a href="#" onclick="gotTo(7)" class="boton volver">&lt;</a>
+    <h2 class="titulo-medio">Cambiar Password</h2>
+    <form class="input-group1" onsubmit="event.preventDefault(); return gotTo(9);">
+      <button type="submit" class="submit-btn" id="btn1">Siguiente</button>
+      <!-- <h3 class="Subtitulo">Dispositivos encontrados</h3> -->
+    </form>
+  </section>
+  <section id="Acercade">
+    <a href="#" onclick="gotTo(8)" class="boton volver">&lt;</a>
+    <h2 class="titulo-medio">Acerca de</h2>
+    <form class="input-group1" onsubmit="event.preventDefault(); return ;">
+      <button type="submit" class="submit-btn" id="btn1">Siguiente</button>
+      <!-- <h3 class="Subtitulo">Dispositivos encontrados</h3> -->
+    </form>
+  </section>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
+
 </html>

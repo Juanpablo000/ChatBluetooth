@@ -11,3 +11,7 @@ Para hacer uso de la aplicación el usuario tendrá que crearse una cuenta, para
 También dispondrá de la opción de editar la información del usuario; dicha información y el contenido de los chats se pretende almacenar de forma local en el dispositivo móvil 
 
 El publico objetivo de la aplicación serán personas mayores de 14 años
+
+
+# Estandares para el manejo del repositorio
+Se tendran 3 ramas en total, las cuales seran master, develop y feature para realizar el seguimiento del proyecto, la rama master se usara como la rama principal en donde se presentara el resultado final del avance realizado en otras ramas, la rama de develop contendra una funcionalidad en especifico y la de feature se genera a partir de la rama de develop, una vez esté desarrollada la funcionalidad la rama feature podrá ser mezclada con develop para que los cambios queden allí.La rama de develop esta asociada a las tareas que se establecieron en en DevOps.

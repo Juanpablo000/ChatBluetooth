@@ -1,65 +1,142 @@
-section{
-    width:360px;
-    height:592px;
-    text-align: center;
-    margin: 0 auto;
-    position: relative;
-}
-body{
-	margin: 0;
-	padding: 0;
-	background: black;
+section {
+  width: 360px;
+  height: 592px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-.ocultar{
-    display: none;
+input {
+  font: 16px/26px "Raleway", sans-serif; 
 }
 
-.titulo-medio{
-    background-color: black;
-    color: white;
-    text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
 }
 
-#Inicio{
-    background:lightblue;
+.login-form
+{
+  width:370px;
+  padding-top: 40px;
 }
-#Registro{
-    background: lightseagreen;
+.login-title
+{
+  font-family: 'Exo', sans-serif;
+  text-align:center;
+  color: white;
 }
-#Escaner{
-    background: lightsteelblue;
+
+.input-login,.input-field{
+  margin-bottom: 10px;
 }
-#ListaChats{
-    background: lightsalmon;
+
+
+fieldset{
+  width: 220px;
+  display: inline;
 }
-#ChatUsuario{
-    background: lightgreen;
+
+.submit-btn{
+  margin-top:10px;
+  border: 2px solid transparent;
+  background: #3498DB;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 13px;
+  padding: 10px 0;
+  border-radius: 5px;
+  width: 200px;
+  cursor: pointer;
 }
-#MenuOpciones{
-    background: lightyellow;
+
+.btnEnviarMSG{
+  margin-top: 100px;
 }
-#EditarPerfil{
-    background: lightpink;
+
+#caja-chat{
+  width: 90%;
+  height: 400px;
 }
-#EditarFoto{
-    background: blueviolet;
+
+#datos-chat{
+  width: 100%;
+  padding: 5px;
+  margin: 5px;
+
 }
-#CambiarPassword{
-    background: brown;
+
+.ocultar {
+  display: none;
 }
-#Acercade{
-    background: aqua;
+
+.titulo-medio {
+  background-color: black;
+  color: white;
+  text-align: center;
 }
-.boton{
-	background-color: Navy;
-	color:white;
-	padding: 10px;
-	text-decoration: none;
+
+textarea{
+  margin-top: 100px;
+  width: 80%;
+  height: 40px;
+  border-radius: 5px;
+  margin-bottom: 3px;
 }
-.volver{
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	height: 20px;
+
+#Inicio {
+  background: lightblue;
+}
+
+#RegistroSec {
+  background: lightseagreen;
+}
+
+#Escaner {
+  background: lightsteelblue;
+}
+
+#ListaChats {
+  background: lightsalmon;
+}
+
+#ChatUsuario {
+  background: lightgreen;
+}
+
+#MenuOpciones {
+  background: lightyellow;
+}
+
+#EditarPerfil {
+  background: lightpink;
+}
+
+#EditarFoto {
+  background: blueviolet;
+}
+
+#CambiarPassword {
+  background: brown;
+}
+
+#Acercade {
+  background: aqua;
+}
+
+.boton {
+  background-color: Navy;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.volver {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 20px;
 }

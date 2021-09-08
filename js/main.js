@@ -7,15 +7,14 @@ const regulares = [/^[a-zA-ZÀ-ÿ\s]{2,20}$/, /^[a-zA-ZÀ-ÿ\s]{2,30}$/,/^[a-zA-
 let arregloMensajePos = ["Nombre valido", "Apellidos validos","Usuario valido","Contraseña valida"];
 let arregloMensaNeg = ["Nombre invalido", "Apellidos invalidos", "Usuario invalido","Contraseña invalida"];
 let camposVal = [false,false,false,false,false];
-              //nombre,apellidos,usuario, clave, conf clave,
+                //nombre,apellidos,usuario, clave, conf clave,
 
 window.onload = () => {
   ocultarAllSections()
   irA(0)
   iniciarVariables();
+  verLogin();
   formularioR = document.getElementById("registro");iniciarVariables();
-  // asignarEventosMenu();
-  // asignarVolver();
   //setTimeout(function () {
    //  irA(0);
   // }, 1000);
@@ -44,19 +43,6 @@ function asignarVolver() {
   }
 }
 
-// function ocultar() {
-//   for (var i = 0; i < secciones.length; i++) {
-//     secciones[i].classList.add("ocultar");
-//   }
-// }
-// function irA(id) {
-//   if (id < 0 || id >= secciones.length) {
-//     return;
-//   }
-//   ocultar();
-//   secciones[id].classList.remove("ocultar");
-// }
-
 function iniciarVariables() {
 
    secciones.push(document.getElementById("Inicio"));
@@ -70,18 +56,6 @@ function iniciarVariables() {
    secciones.push(document.getElementById("CambiarPassword"));
    secciones.push(document.getElementById("Acercade"));
  }
-
-
-// function asignarEventosMenu() {
-//   for (var i of botones_menu) {
-//     //console.log(secciones[i],i);
-//     i.addEventListener("click", function (evento) {
-//       //console.log(event.target);
-//       let seccion = evento.target.id.split("__")[1];
-//       irA(seccion);
-//     });
-//   }
-// }
 
 function validationF(inputName){
   var varInput =  document.getElementById(inputName).value;
@@ -118,13 +92,12 @@ function validarClaves(){
   
   let password = document.getElementById("password").value;
   let password2 = document.getElementById("password2").value;
-  //let password2 = document.registro.password2.value;
 
   var text = document.getElementById("texClr2");
   var pattern = /^[a-zA-Z0-9\_\-]{8,12}$/;
 	  if(password2.match(pattern) && password.localeCompare(password2) == 0){
 		     text.innerHTML="Las contraseñas coinciden";
-		     text.style.color = "#00C851";
+		     text.style.color = "rgb(11, 112, 11)";
 		     camposVal[4]=true;
 	  }else{
 		    text.innerHTML="Las contraseñas no coinciden";
@@ -152,8 +125,4 @@ function val(){
 		alert("Campos incorrectos");
 		return false;
 	}
-}
-
-function limpiar(){
-  document.getElementById("nombre").value="";
 }

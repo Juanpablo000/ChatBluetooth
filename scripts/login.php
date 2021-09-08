@@ -35,7 +35,6 @@
 	            window.location.href = '../';
 	        }else if(variable== -1){
 	        	alert('Has iniciado sesion');
-                document.getElementsByTagName('section')[2].classList.remove('ocultar')
 	        }
 	    }else{
 	     alert('No se ha registrado');

@@ -23,7 +23,6 @@ let ListaUsuarios = JSON.parse(localStorage.getItem("lista"));
 		//validar usario unico
 		var tm = ListaUsuarios.length;
 		for(var i=0; i<tm;i++){
-			alert('Yo ');
 	        if(usuarioR == ListaUsuarios[i].usuario){
 	            alert('El usuario ' + usuarioR +' ya existe');
 	            contrl = false;
@@ -49,7 +48,7 @@ let ListaUsuarios = JSON.parse(localStorage.getItem("lista"));
 	        ListaUsuarios.push(persona); 
 	        localStorage.setItem("lista", JSON.stringify(ListaUsuarios));
 	    }
-	    alert('Su cuenta ha sido creada v:');
+	    alert('Su cuenta ha sido creada');
     }	
  window.location.href = '../';	
  </script>

@@ -1,65 +1,294 @@
-section{
-    width:360px;
-    height:592px;
-    text-align: center;
-    margin: 0 auto;
-    position: relative;
-}
-body{
-	margin: 0;
-	padding: 0;
-	background: black;
+#Acercade {
+  background: aqua;
 }
 
-.ocultar{
-    display: none;
+#ChatUsuario {
+  background: #1970c2;
 }
 
-.titulo-medio{
-    background-color: black;
-    color: white;
-    text-align: center;
+:is(.chat-box)::-webkit-scrollbar {
+  width: 0px;
 }
 
-#Inicio{
-    background:lightblue;
+.chat-box {
+  position: relative;
+  height: 480px;
+  overflow-y: auto;
+  padding: 10px 30px 20px 30px;
+  background: #f7f7f7;
+  box-shadow: inset 0 32px 32px -32px rgba(0, 0, 0, 0.05), inset 0 -32px 32px -32px rgba(0, 0, 0, 0.05);
 }
-#Registro{
-    background: lightseagreen;
+
+.chat-box .text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: calc(100% - 50px);
+  text-align: center;
+  transform: translate(-50%, -50%);
 }
-#Escaner{
-    background: lightsteelblue;
+
+.chat-box .chat {
+  margin: 15px 0;
 }
-#ListaChats{
-    background: lightsalmon;
+
+.chat-box .chat p {
+  word-wrap: break-word;
+  padding: 8px 16px;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.08), 0rem 16px 16px -16px rgba(0, 0, 0, 0.1);
 }
-#ChatUsuario{
-    background: lightgreen;
+
+.chat-box .outgoing {
+  display: flex;
 }
-#MenuOpciones{
-    background: lightyellow;
+
+.chat-box .outgoing .detalles {
+  margin-left: auto;
+  max-width: calc(100% - 130px);
 }
-#EditarPerfil{
-    background: lightpink;
+
+.outgoing .detalles p {
+  background: #333;
+  color: #fff;
+  border-radius: 18px 18px 0 18px;
 }
-#EditarFoto{
-    background: blueviolet;
+
+.chat-box .incoming {
+  display: flex;
+  align-items: flex-end;
 }
-#CambiarPassword{
-    background: brown;
+
+.chat-box .incoming img {
+  height: 20px;
+  width: 20px;
 }
-#Acercade{
-    background: aqua;
+
+.incoming .detalles {
+  margin-left: 10px;
+  margin-right: auto;
+  max-width: calc(100% - 130px);
 }
-.boton{
-	background-color: Navy;
-	color:white;
-	padding: 10px;
-	text-decoration: none;
+
+.incoming .detalles p {
+  background: #fff;
+  color: #333;
+  border-radius: 18px 18px 18px 0;
 }
-.volver{
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	height: 20px;
+
+.chat-box .incoming .detalles {
+  margin-right: auto;
+  margin-left: 5px;
+  max-width: calc(100% - 130px);
+}
+
+.chat-area .typing-area {
+  padding: 18px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.typing-area input {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.typing-area input {
+  height: 45px;
+  width: calc(100% - 98px);
+  font-size: 17px;
+  padding: 0 13px;
+  border: 1px solid #e6e6e6;
+  outline: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.typing-area button {
+  color: #fff;
+  width: 55px;
+  border: none;
+  outline: none;
+  background: #333;
+  font-size: 19px;
+  cursor: pointer;
+  opacity: 0.7;
+  pointer-events: none;
+  border-radius: 5px 0 0 5px;
+  transition: all 0.3s ease;
+}
+
+.typing-area button.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#Escaner {
+  background: lightsteelblue;
+}
+
+.titulo-medio {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+#EditarFoto {
+  background: blueviolet;
+}
+
+#Inicio {
+  background: lightblue;
+}
+
+.input-login, .input-field {
+  margin-bottom: 10px;
+}
+
+#ListaChats {
+  background: #f7f7f7;
+}
+
+#ListaChats header {
+  padding-bottom: 10px;
+}
+
+#ListaChats header, .lista-usuarios a {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 32px;
+}
+
+#ListaChats header .detalles {
+  margin-left: 15px;
+}
+
+#ListaChats header .detalles span {
+  font-size: 18px;
+  font-weight: 50px;
+}
+
+.loguot {
+  color: #fff;
+  font-size: 17px;
+  padding: 17px;
+  background: #333;
+  border-radius: 5px;
+}
+
+.lista-usuarios {
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.lista-usuarios::-webkit-scrollbar {
+  width: 0px;
+}
+
+.lista-usuarios a {
+  margin-bottom: 15px;
+  page-break-after: 10px;
+  border-color: black;
+  border: solid;
+  padding-right: 20px;
+}
+
+.lista-usuarios a:last-child {
+  margin-bottom: 0px;
+}
+
+.lista-usuarios a .contenido img {
+  display: flex;
+  height: 40px;
+  width: 40px;
+}
+
+.lista-usuarios a .status-dot {
+  font-size: 12px;
+  color: #468669;
+}
+
+#MenuOpciones {
+  background: lightyellow;
+}
+
+#CambiarPassword {
+  background: brown;
+}
+
+#EditarPerfil {
+  background: lightpink;
+}
+
+#RegistroSec {
+  background: lightseagreen;
+}
+
+.input-field {
+  margin-bottom: 10px;
+}
+
+fieldset {
+  width: 220px;
+  display: inline;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+
+section {
+  width: 360px;
+  height: 592px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  font: 16px/26px "Raleway", sans-serif;
+}
+
+.boton {
+  background-color: navy;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.volver {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 20px;
+}
+
+.ocultar {
+  display: none;
+}
+
+.submit-btn {
+  margin-top: 10px;
+  border: 2px solid transparent;
+  background: #3498DB;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 13px;
+  padding: 10px 0;
+  border-radius: 5px;
+  width: 200px;
+  cursor: pointer;
+}
+
+img {
+  padding-left: 80px;
+  display: block;
+  margin-right: auto;
+}
+
+h1 {
+  color: white;
 }

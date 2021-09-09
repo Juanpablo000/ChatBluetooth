@@ -8,25 +8,30 @@
     <script type="text/javascript" src="js/main.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/main.css"></script>
 </head>
+
 <body>
     <section class="ocultar" id="Inicio">
         <br>
-        <h1>Inicio</h1>
-        <img src="imgs/i1.png" alt="">
+        <h1> -Inicio-</h1>
+        <img id="i1" src="imgs/i1.png" alt="">
 		<br>
         <br>
 
-        <form class="input-group1" id="Flogin" method="post">
-            <input name= "userA" id= "userA" type="text" class="input-login" placeholder="Nombre de usuario" pattern="[A-Za-z0-9!?-]{5,12}" required/>
+        <form action="scripts/login.php" class="input-group1" id="Flogin" method="post">
+            <input name= "userA" id= "userA" type="text" class="input-login" placeholder="Nombre de usuario" pattern="[a-zA-Z0-9\_\-]{4,12}" required/>
             <input name = "claveA" id="claveA" type="password" class="input-login" placeholder="Contraseña" pattern="[a-zA-Z0-9\_\-]{8,12}$" required/>
             <button type="submit" class="submit-btn" id="btn1">Acceder</button>
-            <button type="submit" id="btn2" class="submit-btn">Registrarse</button>
+            <button type="submit" onclick="irA(1)" id="btn2" class="submit-btn">Registrarse</button>
         </form>
 
     </section>
 
-    <section class="ocultar" id="Registro">
-        <form class="input-group" id="registro" method="post" name="f1">
+    <section class="ocultar" id="RegistroSec">
+        <div>
+            <a onclick="irA(0)" class="boton volver">&lt;</a>
+            <h2 class="titulo-medio">Registro</h2>
+        </div>
+        <form action="scripts/registro.php" class="input-group" id="registro" method="post" name="f1">
             <input type="text" name="nombre" id="nombre" placeholder="Nombres" class="input-field" onkeyup="validationF(this.id)" required/>
             <span id="textNom"></span>
 
@@ -46,54 +51,136 @@
             <span id="texClr1"></span>
             <input type="password" class="input-field" placeholder="Confime contraseña" name="password2" id="password2" onkeyup="validarClaves()" required/>
             <span id="texClr2"></span>
-            <button type="submit" onClick="return val()" id="btn2"class="submit-btn">Registrarse</button>
+            <button type="submit" onClick="return val()" id="btnReturn"class="submit-btn">Registrarse</button>
        </form>
     </section>
 
     <section class="ocultar" id="Escaner">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
-            <h2 class="titulo-medio">Escaner</h2>
-        <br>
-        <button type="submit" class="submit-btn" id="btn1">Buscar dispositivos</button>
-        <h3 class="Subtitulo">Dispositivos encontrados</h3>
-
-       
+        <a onclick="irA(0)" class="boton volver">&lt;</a>
+        <h2 class="titulo-medio">Escaner</h2>
+        <form class="input-group1" onsubmit="event.preventDefault(); return irA(3);">
+          <button type="submit" class="submit-btn" id="btn-Escaner">Buscar dispositivos</button>
+          <h3 class="Subtitulo">Dispositivos encontrados</h3>
+        </form>
     </section>
 
     <section class="ocultar" id="ListaChats">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
+        <a  onclick="irA(2)" class="boton volver">&lt;</a>
+        <h2 class="titulo-medio">Listado de chats</h2>
+            <header>
+            <div class="detalles">
+                <span> NomUsuario </span>
+            </div>
+            <a href="#" class="loguot">Cerrar sesión</a>
+            </header>
+            
+            <div class="lista-usuarios">
+                <a href="#">
+                    <div class="contenido">
+                        <div class="detalles">
+                            <span>Usuario 1</span>
+                            <p>Este es un mensaje</p>
+                        </div>
+                    </div>
+                    <div class="status-dot"><i class="fas"></i></div>
+                </a>
+
+                <a href="#">
+                    <div class="contenido">
+                        <div class="detalles">
+                            <span>Usuario 2</span>
+                            <p>Este es un mensaje</p>
+                        </div>
+                    </div>
+                    <div class="status-dot"><i class="fas"></i></div>
+                </a>
+
+                <a href="#">
+                    <div class="contenido">
+                        <div class="detalles">
+                            <span>Usuario 3</span>
+                            <p>Este es un mensaje</p>
+                        </div>
+                    </div>
+                    <div class="status-dot"><i class="fas"></i></div>
+                </a>
+
+                <a href="#">
+                    <div class="contenido">
+                        <div class="detalles">
+                            <span>Usuario 4</span>
+                            <p>Este es un mensaje</p>
+                        </div>
+                    </div>
+                    <div class="status-dot"><i class="fas"></i></div>
+                </a>
+            </div>
     </section>
 
     <section class="ocultar" id="ChatUsuario">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
+        <a onclick="irA(3)" class="boton volver">&lt;</a>
+        <h2 class="titulo-medio">Chat</h2>
+
+        <div class="chat-box">
+            <div class="chat outgoing">
+                <div class="detalles">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente assumenda quaerat velit hic, explicabo officia nihil cupiditate quae nulla repudiandae ad aperiam nobis quo soluta dolorum ab ea ullam nesciunt?</p>
+                </div>
+            </div>
+            <div class="chat incoming">
+         
+                <div class="detalles">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente assumenda quaerat velit hic, explicabo officia nihil cupiditate quae nulla repudiandae ad aperiam nobis quo soluta dolorum ab ea ullam nesciunt?</p>
+                </div>
+            </div>
+            <div class="chat outgoing">
+                <div class="detalles">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                </div>
+            </div>
+            <div class="chat incoming">
+            <div class="detalles">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+            </div>
+            </div>        
+        </div>
+        <form action="#" class="typing-area">
+            <input type="text" placeholder="Ingresa tu mensaje...">
+            <button type="submit" class="submit-btn">Enviar</button>
+            
+        </form>
+
     </section>
 
     <section class="ocultar" id="MenuOpciones">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
+        <a  onclick="irA(4)" class="boton volver">&lt;</a>
+        <h2 class="titulo-medio">Opciones</h2>
+
+        <button type="submit" onclick="irA(6)" class="submit-btn" id="btn-perfil">Editar perfil</button>
+        <button type="submit" onclick="irA(9)" class="submit-btn" id="btn-acerca">Acerca de</button>
     </section>
 
     <section class="ocultar" id="EditarPerfil">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
+        <a onclick="irA(5)" class="boton volver">&lt;</a>
+        <h2 class="titulo-medio">Editar Perfil</h2>
+
+        <button type="submit" onclick="irA(8)" class="submit-btn" id="btn-pass">Cambiar contraseña</button>
+        <button type="submit" onclick="irA(7)" class="submit-btn" id="btn-foto">Cambiar foto</button>
     </section>
 
     <section class="ocultar" id="EditarFoto">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
+        <a onclick="irA(6)" class="boton volver">&lt;</a>
+        <h2 class="titulo-medio">Editar Foto</h2>
     </section>
 
     <section class="ocultar" id="CambiarPassword">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
+        <a onclick="irA(6)" class="boton volver">&lt;</a>
+        <h2 class="titulo-medio">Cambiar Password</h2>
     </section>
 
     <section class="ocultar" id="Acercade">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
+        <a onclick="irA(5)" class="boton volver">&lt;</a>
+        <h2 class="titulo-medio">Acerca de</h2>
     </section>
 </body>
 </html>

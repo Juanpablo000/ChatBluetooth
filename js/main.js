@@ -1,4 +1,3 @@
-let secciones = [];
 let botones_menu = [];
 let opciones;
 const nombresID = ["nombre","apellidos","usuario","password"];
@@ -12,12 +11,12 @@ let camposVal = [false,false,false,false,false];
 window.onload = () => {
   ocultarAllSections()
   irA(0)
-  iniciarVariables();
-  formularioR = document.getElementById("registro");iniciarVariables();
+  val2();
   //setTimeout(function () {
    //  irA(0);
-  // }, 1000);
+  // }, 100);
 }
+
 
 function ocultarAllSections() {
   let sections = document.getElementsByTagName('section')
@@ -42,26 +41,10 @@ function asignarVolver() {
   }
 }
 
-function iniciarVariables() {
-
-   secciones.push(document.getElementById("Inicio"));
-   secciones.push(document.getElementById("Registro"));
-   secciones.push(document.getElementById("Escaner"));
-   secciones.push(document.getElementById("ListaChats"));
-   secciones.push(document.getElementById("ChatUsuario"));
-   secciones.push(document.getElementById("MenuOpciones"));
-   secciones.push(document.getElementById("EditarPerfil"));
-   secciones.push(document.getElementById("EditarFoto"));
-   secciones.push(document.getElementById("CambiarPassword"));
-   secciones.push(document.getElementById("Acercade"));
- }
-
 function validationF(inputName){
   var varInput =  document.getElementById(inputName).value;
-  var tam = 5;
-  //formularioR.length
 
-  for(var i=0; i<tam; i++){
+  for(var i=0; i<5; i++){
 	    if(inputName.localeCompare(nombresID[i]) == 0){
 	  	  var text = document.getElementById(arregloTextos[i]);
 		    var pattern = regulares[i];
@@ -123,5 +106,14 @@ function val(){
 	}else{
 		alert("Campos incorrectos");
 		return false;
+	}
+}
+
+function val2(){
+	let salida = JSON.parse(localStorage.getItem("validador"));
+	if(salida!=null){
+		if(salida.acceso == -1){
+			irA(2);
+		}
 	}
 }

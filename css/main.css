@@ -1,3 +1,91 @@
+#Acercade {
+  background: aqua;
+}
+
+#ChatUsuario {
+  background: lightgreen;
+}
+
+.btnEnviarMSG {
+  margin-top: 100px;
+}
+
+#caja-chat {
+  width: 90%;
+  height: 400px;
+}
+
+#datos-chat {
+  width: 100%;
+  padding: 5px;
+  margin: 5px;
+}
+
+textarea {
+  margin-top: 100px;
+  width: 80%;
+  height: 40px;
+  border-radius: 5px;
+  margin-bottom: 3px;
+}
+
+#Escaner {
+  background: lightsteelblue;
+}
+
+.titulo-medio {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+#EditarFoto {
+  background: blueviolet;
+}
+
+#Inicio {
+  background: lightblue;
+}
+
+.input-login, .input-field {
+  margin-bottom: 10px;
+}
+
+#ListaChats {
+  background: lightsalmon;
+}
+
+#MenuOpciones {
+  background: lightyellow;
+}
+
+#CambiarPassword {
+  background: brown;
+}
+
+#EditarPerfil {
+  background: lightpink;
+}
+
+#RegistroSec {
+  background: lightseagreen;
+}
+
+.input-field {
+  margin-bottom: 10px;
+}
+
+fieldset {
+  width: 220px;
+  display: inline;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+
 section {
   width: 360px;
   height: 592px;
@@ -9,39 +97,29 @@ section {
 }
 
 input {
-  font: 16px/26px "Raleway", sans-serif; 
+  font: 16px/26px "Raleway", sans-serif;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background: black;
-}
-
-.login-form
-{
-  width:370px;
-  padding-top: 40px;
-}
-.login-title
-{
-  font-family: 'Exo', sans-serif;
-  text-align:center;
+.boton {
+  background-color: navy;
   color: white;
+  padding: 10px;
+  text-decoration: none;
 }
 
-.input-login,.input-field{
-  margin-bottom: 10px;
+.volver {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 20px;
 }
 
-
-fieldset{
-  width: 220px;
-  display: inline;
+.ocultar {
+  display: none;
 }
 
-.submit-btn{
-  margin-top:10px;
+.submit-btn {
+  margin-top: 10px;
   border: 2px solid transparent;
   background: #3498DB;
   color: #ffffff;
@@ -53,90 +131,12 @@ fieldset{
   cursor: pointer;
 }
 
-.btnEnviarMSG{
-  margin-top: 100px;
+img {
+  padding-left: 80px;
+  display: block;
+  margin-right: auto;
 }
 
-#caja-chat{
-  width: 90%;
-  height: 400px;
-}
-
-#datos-chat{
-  width: 100%;
-  padding: 5px;
-  margin: 5px;
-
-}
-
-.ocultar {
-  display: none;
-}
-
-.titulo-medio {
-  background-color: black;
+h1 {
   color: white;
-  text-align: center;
-}
-
-textarea{
-  margin-top: 100px;
-  width: 80%;
-  height: 40px;
-  border-radius: 5px;
-  margin-bottom: 3px;
-}
-
-#Inicio {
-  background: lightblue;
-}
-
-#RegistroSec {
-  background: lightseagreen;
-}
-
-#Escaner {
-  background: lightsteelblue;
-}
-
-#ListaChats {
-  background: lightsalmon;
-}
-
-#ChatUsuario {
-  background: lightgreen;
-}
-
-#MenuOpciones {
-  background: lightyellow;
-}
-
-#EditarPerfil {
-  background: lightpink;
-}
-
-#EditarFoto {
-  background: blueviolet;
-}
-
-#CambiarPassword {
-  background: brown;
-}
-
-#Acercade {
-  background: aqua;
-}
-
-.boton {
-  background-color: Navy;
-  color: white;
-  padding: 10px;
-  text-decoration: none;
-}
-
-.volver {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  height: 20px;
 }

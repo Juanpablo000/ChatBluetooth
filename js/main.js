@@ -13,7 +13,6 @@ window.onload = () => {
   ocultarAllSections()
   irA(0)
   iniciarVariables();
-  verLogin();
   formularioR = document.getElementById("registro");iniciarVariables();
   //setTimeout(function () {
    //  irA(0);

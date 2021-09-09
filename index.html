@@ -8,11 +8,12 @@
     <script type="text/javascript" src="js/main.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/main.css"></script>
 </head>
+
 <body>
     <section class="ocultar" id="Inicio">
         <br>
-        <h1>Inicio</h1>
-        <img src="imgs/i1.png" alt="">
+        <h1> -Inicio-</h1>
+        <img id="i1" src="imgs/i1.png" alt="">
 		<br>
         <br>
 
@@ -20,12 +21,16 @@
             <input name= "userA" id= "userA" type="text" class="input-login" placeholder="Nombre de usuario" pattern="[A-Za-z0-9!?-]{5,12}" required/>
             <input name = "claveA" id="claveA" type="password" class="input-login" placeholder="Contraseña" pattern="[a-zA-Z0-9\_\-]{8,12}$" required/>
             <button type="submit" class="submit-btn" id="btn1">Acceder</button>
-            <button type="submit" id="btn2" class="submit-btn">Registrarse</button>
+            <button type="submit" onclick="irA(1)" id="btn2" class="submit-btn">Registrarse</button>
         </form>
 
     </section>
 
-    <section class="ocultar" id="Registro">
+    <section class="ocultar" id="RegistroSec">
+        <div>
+            <a href="#" onclick="irA(0)" class="boton volver">&lt;</a>
+            <h2 class="titulo-medio">Registro</h2>
+        </div>
         <form class="input-group" id="registro" method="post" name="f1">
             <input type="text" name="nombre" id="nombre" placeholder="Nombres" class="input-field" onkeyup="validationF(this.id)" required/>
             <span id="textNom"></span>
@@ -51,49 +56,61 @@
     </section>
 
     <section class="ocultar" id="Escaner">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
-            <h2 class="titulo-medio">Escaner</h2>
-        <br>
-        <button type="submit" class="submit-btn" id="btn1">Buscar dispositivos</button>
-        <h3 class="Subtitulo">Dispositivos encontrados</h3>
-
-       
+        <a href="#" onclick="irA(1)" class="boton volver">&lt;</a>
+        <h2 class="titulo-medio">Escaner</h2>
+        <form class="input-group1" onsubmit="event.preventDefault(); return irA(3);">
+          <button type="submit" class="submit-btn" id="btn1">Buscar dispositivos</button>
+          <h3 class="Subtitulo">Dispositivos encontrados</h3>
+        </form>
     </section>
 
     <section class="ocultar" id="ListaChats">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
+        <a href="#" onclick="irA(2)" class="boton volver">&lt;</a>
+        <h2 class="titulo-medio">Listado de chats</h2>
+            <form class="input-group1" onsubmit="event.preventDefault(); return irA(4);">
+                <button type="submit" class="submit-btn" id="btn1">Siguiente</button>
+                <!-- <h3 class="Subtitulo">Lista de chats</h3> -->
+            </form>
     </section>
 
     <section class="ocultar" id="ChatUsuario">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
+        <a href="#" onclick="irA(3)" class="boton volver">&lt;</a>
+        <h2 class="titulo-medio">Chat</h2>
+            <form class="input-group1" onsubmit="event.preventDefault(); return irA(5);">
+                <button type="submit" class="submit-btn" id="btn1">Siguiente</button>
+                <!-- <h3 class="Subtitulo">Dispositivos encontrados</h3> -->
+            </form>
     </section>
 
     <section class="ocultar" id="MenuOpciones">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
+        <a href="#" onclick="irA(4)" class="boton volver">&lt;</a>
+        <h2 class="titulo-medio">Opciones</h2>
+
+        <button type="submit" onclick="irA(6)" class="submit-btn" id="btn-perfil">Editar perfil</button>
+        <button type="submit" onclick="irA(9)" class="submit-btn" id="btn-acerca">Acerca de</button>
     </section>
 
     <section class="ocultar" id="EditarPerfil">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
+        <a href="#" onclick="irA(5)" class="boton volver">&lt;</a>
+        <h2 class="titulo-medio">Editar Perfil</h2>
+
+        <button type="submit" onclick="irA(8)" class="submit-btn" id="btn-pass">Cambiar contraseña</button>
+        <button type="submit" onclick="irA(7)" class="submit-btn" id="btn-foto">Cambiar foto</button>
     </section>
 
     <section class="ocultar" id="EditarFoto">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
+        <a href="#" onclick="irA(6)" class="boton volver">&lt;</a>
+        <h2 class="titulo-medio">Editar Foto</h2>
     </section>
 
     <section class="ocultar" id="CambiarPassword">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
+        <a href="#" onclick="irA(6)" class="boton volver">&lt;</a>
+        <h2 class="titulo-medio">Cambiar Password</h2>
     </section>
 
     <section class="ocultar" id="Acercade">
-        <a href="javascript:void(0);" class="boton volver">&lt;</a>
-        <br>
+        <a href="#" onclick="irA(5)" class="boton volver">&lt;</a>
+        <h2 class="titulo-medio">Acerca de</h2>
     </section>
 </body>
 </html>

@@ -1,0 +1,28 @@
+$color_sec_Chat:lightgreen;
+
+#ChatUsuario {
+    background: $color_sec_Chat;
+}
+
+.btnEnviarMSG{
+    margin-top: 100px;
+}
+
+#caja-chat{
+    width: 90%;
+    height: 400px;
+}
+
+#datos-chat{
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+}
+  
+textarea{
+    margin-top: 100px;
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 3px;
+}

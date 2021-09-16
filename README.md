@@ -2,6 +2,8 @@
 Esta "rama" del repositorio trabajo con sokets debido a que el API de bluetooth web y el plugin de capacitor basado en la misma API poseen una muy mala compatibilidad con los navegadores, siendo el bluetooth una tecnología experimental; debido a este motivo se continuo con la idea un chat muy simple, pero en esta ocasión dicho chat no tendría como base a el bluetooh sino a los sokets, express y npm.
 
 # Importante
+El autor orignal del código se encuentra en este video: https://www.youtube.com/watch?v=jD7FnbI76Hg; este repositorio es solo una adaptación de su código a una aplicación movíl
+
 La aplicación requiere de internet para funcionar, ademas necesita ejecutar los siguientes comandos, de lo contrario no hara nada:
 - npm install
 - npm run dev

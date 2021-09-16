@@ -1,5 +1,3 @@
-let botones_menu = [];
-let opciones;
 const nombresID = ["nombre","apellidos","usuario","password"];
 let arregloTextos = ["textNom","textApp","textUsr","texClr1"];	
 const regulares = [/^[a-zA-ZÀ-ÿ\s]{2,20}$/, /^[a-zA-ZÀ-ÿ\s]{2,30}$/,/^[a-zA-Z0-9\_\-]{4,12}$/,/^[a-zA-Z0-9\_\-]{8,12}$/];
@@ -12,9 +10,6 @@ window.onload = () => {
   ocultarAllSections()
   irA(0)
   val2();
-  //setTimeout(function () {
-   //  irA(0);
-  // }, 100);
 }
 
 
@@ -28,16 +23,6 @@ function irA(val) {
   if (val >= 0 && val < document.getElementsByTagName('section').length) {
     ocultarAllSections()
     document.getElementsByTagName('section')[val].classList.remove('ocultar')
-  }
-}
-
-function asignarVolver() {
-  let botones_volver = document.querySelectorAll(".volver");
-  for (let i of botones_volver) {
-    i.addEventListener("click", function (evento) {
-      evento.preventDefault();
-      irA(0);
-    });
   }
 }
 

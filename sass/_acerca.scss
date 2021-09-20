@@ -1,5 +1,33 @@
+$color_join: #B0C4DE;
+$color_header: #262BC9;
+$color_info: white;
 
-$color_sec_Acercade:aqua;
-#Acercade {
-    background: $color_sec_Acercade;
+.info-container{
+    width: 100%;
+	height: 100%;
+	color: black;
+}
+
+.info-header{
+    background: $color_header;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info-main{
+    padding: 30px 40px;
+	background: $color_info;
+	height: 100%;
+}
+
+.info-main p {
+	margin-bottom: 20px;
+    color: black;
+    text-align: justify;
+}
+
+.info-main h2{
+    padding-bottom: 20px;
 }

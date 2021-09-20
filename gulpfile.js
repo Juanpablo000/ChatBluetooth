@@ -7,38 +7,27 @@ const cleanCSS = require('gulp-clean-css');
 const uglify = require('gulp-uglify-es').default;
 const destino = "dist";
 
-
 function cssminificar_css() {
     return src("./sass/**/*.scss")
-             .pipe(sass())
-             .pipe(cleanCSS())
-             .pipe(rename('main.min.css'))
-             .pipe(dest(`./${destino}/css`));
+            .pipe(sass())
+            .pipe(cleanCSS())
+            .pipe(rename('main.min.css'))
+            .pipe(dest("./css"));
+             // .pipe(dest("./public/css"));
 }
 
 function js(){
     return src("./js//*")
            .pipe(concat("main.min.js"))
            .pipe(uglify())
-           .pipe(dest(`./${destino}/js/`));
-}
-
-function mover_css(){
-    return src('./css/**/*')
-    .pipe(dest(`./${destino}/css`));
-}
-
-function mover_js(){
-    return src('./js/**/*')
-    .pipe(dest(`./${destino}/js`));
+           .pipe(dest("./js"));
 }
 
 exports.cssmin = cssminificar_css;
 exports.js = js;
 
-exports.release = series(cssminificar_css,js,mover_css,mover_js);
-exports.build = series(cssminificar_css,js,mover_css,mover_js);
-
+//sass ./sass/index.scss ./css/main.css
+//sass --watch --no-source-map ./sass/index.scss ./css/main.css
 
 //gulp cssmin
 //gulp js

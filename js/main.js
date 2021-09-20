@@ -1,20 +1,11 @@
-const nombresID = ["nombre","apellidos","usuario","password"];
-let arregloTextos = ["textNom","textApp","textUsr","texClr1"];	
-const regulares = [/^[a-zA-ZÀ-ÿ\s]{2,20}$/, /^[a-zA-ZÀ-ÿ\s]{2,30}$/,/^[a-zA-Z0-9\_\-]{4,12}$/,/^[a-zA-Z0-9\_\-]{8,12}$/];
-let arregloMensajePos = ["Nombre valido", "Apellidos validos","Usuario valido","Contraseña valida"];
-let arregloMensaNeg = ["Nombre invalido", "Apellidos invalidos", "Usuario invalido","Contraseña invalida"];
-let camposVal = [false,false,false,false,false];
-                //nombre,apellidos,usuario, clave, conf clave,
-
 window.onload = () => {
-  ocultarAllSections()
-  irA(0)
-  val2();
+	ocultarAllSections()
+	val2()
 }
 
 
 function ocultarAllSections() {
-  let sections = document.getElementsByTagName('section')
+  let sections = document.getElementsByTagName('section');
   for (let section of sections)
     section.classList.add('ocultar');
 }
@@ -26,79 +17,45 @@ function irA(val) {
   }
 }
 
-function validationF(inputName){
-  var varInput =  document.getElementById(inputName).value;
 
-  for(var i=0; i<5; i++){
-	    if(inputName.localeCompare(nombresID[i]) == 0){
-	  	  var text = document.getElementById(arregloTextos[i]);
-		    var pattern = regulares[i];
-		  if(varInput.match(pattern)){
-		  	text.innerHTML = arregloMensajePos[i];
-			  text.style.color = "rgb(11, 112, 11)";
-		    camposVal[i] = true;
-        break;
-        
-		  }else{
-		    text.innerHTML = arregloMensaNeg[i];
-		    text.style.color = "#ff0000";
-		    camposVal[i] = false;
-		  }
-
-		  if(varInput==""){
-		  	camposVal[i] = false;
-		    text.innerHTML="";
-		    text.style.color = "#00ff00";
-		  }
-	    }
-    }
-}
-
-
-function validarClaves(){
-  
-  let password = document.getElementById("password").value;
-  let password2 = document.getElementById("password2").value;
-
-  var text = document.getElementById("texClr2");
-  var pattern = /^[a-zA-Z0-9\_\-]{8,12}$/;
-	  if(password2.match(pattern) && password.localeCompare(password2) == 0){
-		     text.innerHTML="Las contraseñas coinciden";
-		     text.style.color = "rgb(11, 112, 11)";
-		     camposVal[4]=true;
-	  }else{
-		    text.innerHTML="Las contraseñas no coinciden";
-		    text.style.color = "#ff0000";
-		    camposVal[4]=false;
-	  }
-	  if(password2==""){
-	  	camposVal[4]=false;
-	    text.innerHTML="";
-	    text.style.color = "#00ff00";
-	  }	
-}
-
-function val(){
-	var i=-1;
-	var t = camposVal.length;
-	for(i=0; i<t;i++){
-		if(camposVal[i]==false){
-			break;
-		}
+function validar(){
+	var nom = document.getElementById("userA").value;
+	
+	if(nom!=""){
+		irA(1);
 	}
-	if(i==5){
-		return true;
+	return (false);
+}
+
+function mensajeSalida(){
+	var message = document.getElementById("msg").value;
+	const div = document.createElement('div');
+	var nom = document.getElementById("userA").value;
+
+	var time = new Date();
+	hora=time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }).toLowerCase();
+
+
+	if(message != ""){
+		div.classList.add('message');
+		div.innerHTML = `<p class="meta">${nom} <span>${hora}</span></p>
+		<p class="text">
+			${message}
+		</p>`;
+		document.querySelector('.chat-messages').appendChild(div);
+		document.getElementById("msg").value = '';
 	}else{
-		alert("Campos incorrectos");
-		return false;
+		alert("No se permiten mensajes vacios");
 	}
+	return (false);
 }
+
 
 function val2(){
-	let salida = JSON.parse(localStorage.getItem("validador"));
-	if(salida!=null){
-		if(salida.acceso == -1){
-			irA(2);
-		}
-	}
+	var nom = document.getElementById("userA").value;
+	if(nom!=""){
+		irA(1)
+	}else{
+		irA(0)
+  }
 }

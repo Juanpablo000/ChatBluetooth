@@ -1,13 +1,24 @@
-$color_sec_ListaChat:#f7f7f7;
-#ListaChats {
-    background: $color_sec_ListaChat;
+$color_header: #262BC9;
+$color_btn : #e6e9ff;
+$color_btn_bk: #262BC9;
+$color_chats: white;
+
+
+.lc-container{
+    background: white;
+    height: 100%;
 }
 
-#ListaChats header{
-    padding-bottom: 10px;
+.lc-header{
+	background: $color_header;
+	color: white;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
-#ListaChats header, .lista-usuarios a{
+.lista-usuarios a{
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -23,17 +34,10 @@ $color_sec_ListaChat:#f7f7f7;
     font-weight: 50px;
 }
 
-.loguot{
-    color: #fff;
-    font-size: 17px;
-    padding: 17px;
-    background: #333;
-    border-radius: 5px;
-}
-
 .lista-usuarios{
-    max-height: 350px;
-    overflow-y: auto;
+	height: 100%;
+    overflow-y: hidden;
+    background: $color_chats;
 }
 
 .lista-usuarios::-webkit-scrollbar{
@@ -42,7 +46,6 @@ $color_sec_ListaChat:#f7f7f7;
 
 .lista-usuarios a{
     margin-bottom: 15px;
-    page-break-after: 10px;
     border-color: black;
     border:solid;
     padding-right: 20px;
@@ -60,4 +63,6 @@ $color_sec_ListaChat:#f7f7f7;
 .lista-usuarios a .status-dot{
     font-size: 12px;
     color: #468669;
+    margin-top: 25px;
 }
+

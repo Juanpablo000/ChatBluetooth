@@ -5,10 +5,20 @@ $color_logintitle:white;
 $color_btnSub_bk:#3498DB;
 $color_btnSub:#ffffff;
 
-body{
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body{
+    font-family: Roboto,sans-serif;
+    font-size: 16px;
     background: $color_backgroud;
+}
+
+div {
+    display: block;
 }
 
 section {
@@ -32,13 +42,6 @@ input {
     text-decoration: none;
 }
 
-.volver {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    height: 20px;
-}
-
 .ocultar {
     display: none;
 }
@@ -56,12 +59,7 @@ input {
   cursor: pointer;
 }
 
-img{
-    padding-left: 80px;
-    display: block;
-    margin-right: auto;
-}
-
 h1{
     color:white;
+    display: block;
 }
